@@ -1,5 +1,5 @@
 
-# Building a Simple Auto-Encoder - Lab
+# Building a Simple Autoencoder - Lab
 
 ## Introduction
 In this lab, we will try to build a simple autoencoder using Keras. We will work with the fashion-MNIST dataset to work out a problem of image compression and reconstruction. With a simple AE, the results may not be highly impressive, but the key takeaway from this lab is to see how the encoding/decoding functions are implemented neural nets and are differentiable with respect to the distance function. The differentiable part enables optimizing the parameters of the encoding/decoding functions to minimize the reconstruction loss.
@@ -7,6 +7,9 @@ In this lab, we will try to build a simple autoencoder using Keras. We will work
 Note: Refer to [Keras dcumentation](https://keras.io/) for details on methods used in this lab. 
 
 ## Objectives
+
+You will be able to: 
+
 - Build a simple autoencoder in Keras
 - Create the encoder and decoder functions as fully connected layers of a feed forward styled neural network. 
 - Train an autoencoder with selected loss function and optimizer.
@@ -31,7 +34,7 @@ from IPython.display import Image
 import matplotlib.pyplot as plt
 ```
 
-### The Fashion-MNIST dataset
+## The Fashion-MNIST dataset
 
 We have already seen the popular MNIST dataset in our previous lessons. Let's load the very similar ["fashion-mnist" dataset](https://github.com/zalandoresearch/fashion-mnist). 
 
@@ -86,7 +89,7 @@ x_test = x_test.reshape((len(x_test), np.prod(x_test.shape[1:])))
 
 
 
-## Build a Simple AutoEncoder
+## Build a Simple Autoencoder
 
 With our pre-processed data, we can start building a simple autoencoder with its The encoder and decoder functions are each __fully-connected__ neural layers. The encoder function will use a __ReLU__ (Rectified Linear Unit) activation function, while the decoder function uses a __sigmoid__ activation function.
 
